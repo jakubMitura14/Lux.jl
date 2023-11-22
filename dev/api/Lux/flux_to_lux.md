@@ -64,7 +64,7 @@ m2(x, ps, st)
 ```
 
 
-<a target='_blank' href='https://github.com/LuxDL/Lux.jl/blob/e38ffa88de513d91bc5164a6287ff4d8682eb449/src/extensions.jl#L2-L44' class='documenter-source'>source</a><br>
+<a target='_blank' href='https://github.com/LuxDL/Lux.jl/blob/6416d9581960b9620c22bf81ac10301ee9bc4783/src/extensions.jl#L2-L44' class='documenter-source'>source</a><br>
 
 </div>
 <br>
@@ -105,7 +105,7 @@ Introducing this Layer in your model will lead to type instabilities, given the 
   * `p`: Flattened parameters of the `layer`
 
 
-<a target='_blank' href='https://github.com/LuxDL/Lux.jl/blob/e38ffa88de513d91bc5164a6287ff4d8682eb449/src/extensions.jl#L49-L76' class='documenter-source'>source</a><br>
+<a target='_blank' href='https://github.com/LuxDL/Lux.jl/blob/6416d9581960b9620c22bf81ac10301ee9bc4783/src/extensions.jl#L49-L76' class='documenter-source'>source</a><br>
 
 </div>
 <br>
