@@ -36,6 +36,7 @@ StaticArraysCore = "1e83bf80-4336-4d27-bf5d-d5a4f845583c"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 VectorizationBase = "3d5dd08c-fd9d-11e8-17fa-ed2836048c2f"
 WeightInitializers = "d49dbf32-c5c2-4618-8acc-27bb2598ef2d"
+Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
 
 [weakdeps]
 CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
@@ -49,7 +50,7 @@ NCCL = "3fe64909-d7a1-4096-9b7d-7a0f12cf0f6b"
 ReverseDiff = "37e2e3b7-166d-5795-8a7a-e32c996b4267"
 SimpleChains = "de6bee2f-e2f4-4ec7-b6ed-219cc6f6e9e5"
 Tracker = "9f7883ad-71c0-57eb-9f7f-b5c9e6d3789c"
-Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
+
 
 [extensions]
 LuxComponentArraysExt = "ComponentArrays"
