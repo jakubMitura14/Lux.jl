@@ -1,3 +1,4 @@
+using Zygote
 """
     SkipConnection(layers, connection; name=nothing)
     SkipConnection(; layers, connection, name=nothing)
@@ -77,8 +78,8 @@ end
 
 function (skip::SkipConnection{<:AbstractLuxLayer, <:AbstractLuxLayer})(
         x, ps, st::NamedTuple)
-    mx, st1 = @inline apply(skip.layers, x, ps.layers, st.layers)
-    y, st2 = @inline apply(skip.connection, (mx, x), ps.connection, st.connection)
+    mx, st1 = @inline Zygote.checkpointed(apply(skip.layers, x, ps.layers, st.layers))
+    y, st2 = @inline Zygote.checkpointed(apply(skip.connection, (mx, x), ps.connection, st.connection))
     return y, (layers=st1, connection=st2)
 end
 
@@ -484,8 +485,8 @@ wrap_functions_in_chain_call(x) = x
     N = length(fields)
     x_symbols = vcat([:x], [gensym() for _ in 1:N])
     st_symbols = [gensym() for _ in 1:N]
-    calls = [:(($(x_symbols[i + 1]), $(st_symbols[i])) = @inline apply(
-                 layers.$(fields[i]), $(x_symbols[i]), ps.$(fields[i]), st.$(fields[i])))
+    calls = [:(($(x_symbols[i + 1]), $(st_symbols[i])) = @inline Zygote.checkpointed(apply(
+                 layers.$(fields[i]), $(x_symbols[i]), ps.$(fields[i]), st.$(fields[i]))))
              for i in 1:N]
     push!(calls, :(st = NamedTuple{$fields}((($(Tuple(st_symbols)...),)))))
     push!(calls, :(return $(x_symbols[N + 1]), st))
