@@ -79,7 +79,8 @@ end
 function (skip::SkipConnection{<:AbstractLuxLayer, <:AbstractLuxLayer})(
         x, ps, st::NamedTuple)
     mx, st1 = @inline Zygote.checkpointed(apply(skip.layers, x, ps.layers, st.layers))
-    y, st2 = @inline Zygote.checkpointed(apply(skip.connection, (mx, x), ps.connection, st.connection))
+    y, st2 = @inline Zygote.checkpointed(apply(
+        skip.connection, (mx, x), ps.connection, st.connection))
     return y, (layers=st1, connection=st2)
 end
 
