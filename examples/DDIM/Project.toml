@@ -36,7 +36,7 @@ JLD2 = "0.4.48, 0.5"
 Lux = "1"
 LuxCUDA = "0.3"
 MLUtils = "0.4"
-Optimisers = " 0.3"
+Optimisers = "0.3, 0.4"
 ParameterSchedulers = "0.4.1"
 ProgressBars = "1"
 Random = "1.10"
@@ -47,8 +47,8 @@ TensorBoardLogger = "0.1"
 Zygote = "0.6"
 
 [extras]
-CUDA_Runtime_jll = "76a88914-d11a-5bdc-97e0-2f5a05c973a2"
 CUDA_Driver_jll = "4ee394cb-3365-5eb0-8335-949819d2adfc"
+CUDA_Runtime_jll = "76a88914-d11a-5bdc-97e0-2f5a05c973a2"
 
 [preferences.CUDA_Driver_jll]
 compat = false
