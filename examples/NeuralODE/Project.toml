@@ -25,7 +25,7 @@ Optimisers = "0.2, 0.3"
 OrdinaryDiffEq = "6"
 SciMLSensitivity = "7.63"
 Statistics = "1"
-Zygote = "0.6"
+Zygote = "0.6, 0.7"
 
 [extras]
 CUDA_Driver_jll = "4ee394cb-3365-5eb0-8335-949819d2adfc"
