@@ -15,7 +15,7 @@ ForwardDiff = "0.10"
 Lux = "1"
 LuxCUDA = "0.3"
 Optimisers = "0.3"
-Zygote = "0.6"
+Zygote = "0.6, 0.7"
 
 [extras]
 CUDA_Driver_jll = "4ee394cb-3365-5eb0-8335-949819d2adfc"
