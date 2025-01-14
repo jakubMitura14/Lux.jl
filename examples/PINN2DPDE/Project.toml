@@ -13,7 +13,7 @@ Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
 
 [compat]
 ADTypes = "1.8.1"
-CairoMakie = "0.12.10"
+CairoMakie = "0.12.10, 0.13"
 Lux = "1"
 LuxCUDA = "0.3.3"
 MLUtils = "0.4.4"
