@@ -24,7 +24,7 @@ Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
 
 [compat]
 ArgCheck = "2.3.0"
-CairoMakie = "0.12"
+CairoMakie = "0.12, 0.13"
 Comonicon = "1"
 ConcreteStructs = "0.2.3"
 DataAugmentation = "0.3"
@@ -47,8 +47,8 @@ TensorBoardLogger = "0.1"
 Zygote = "0.6"
 
 [extras]
-CUDA_Runtime_jll = "76a88914-d11a-5bdc-97e0-2f5a05c973a2"
 CUDA_Driver_jll = "4ee394cb-3365-5eb0-8335-949819d2adfc"
+CUDA_Runtime_jll = "76a88914-d11a-5bdc-97e0-2f5a05c973a2"
 
 [preferences.CUDA_Driver_jll]
 compat = false
